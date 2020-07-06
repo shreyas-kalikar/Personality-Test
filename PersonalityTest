@@ -1,0 +1,207 @@
+import java.util.*;
+
+public class PersonalityTest
+{
+	static int[] optA = new int[4];
+	static int[] optB= new int[4];
+	public static void main(String[]args)
+	{
+		percentage(optA,optB);
+		
+	}
+	
+	
+	
+	public static void percentage(int[] optAf, int[] optBf)
+	{
+		count();
+		int[] finarray = new int[4];
+		char A='A';
+		char B='B';
+		char C='C';
+		char D='D';
+		for(int i=0;i<4;i++)
+		{
+			finarray[i]= (((optAf[i])/(optAf[i]+optBf[i]))*100);
+		}
+		
+		
+		if(finarray[0]>50)
+		{
+			
+			 A= 'E';
+		}
+		else 
+		{
+			 A = 'I';
+		}
+		 if(finarray[1]>50)
+		{
+			 B = 'S';
+		}
+		else 
+		{
+			 B = 'N';
+		}
+		if(finarray[2]>50)
+		{
+			 C = 'T';
+		}
+		else 
+		{
+			 C = 'F';
+		}
+		 if(finarray[3]>50)
+		{
+			 D = 'J';
+		}
+		else 
+		{
+			 D = 'P';
+		}
+		
+		System.out.println(A+""+B+""+C+""+D);
+    
+	}
+	
+	public static void count()
+	{
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter the string of options:");
+		String result = s.nextLine();
+		System.out.println(result);
+		int countA1=0;
+		int countB1=0;
+		int countA2=0;
+		int countB2=0;
+		int countA3=0;
+		int countB3=0;
+		int countA4=0;
+		int countB4=0;
+				
+		for(int i=0;i<(result.length()/7);i++)
+		{
+			
+			if(result.charAt(7*i)=='A')
+			{
+				countA1++;
+			}
+			
+			else 
+			{
+				countB1++;
+			}
+						
+			
+		}
+		
+		for(int i=0;i<(result.length()/7);i++)
+		{
+			
+			if(result.charAt((7*i)+1)=='A')
+			{
+				countA2++;
+			}
+			
+			else 
+			{
+				countB2++;
+			}
+						
+			
+		}
+		
+		for(int i=0;i<(result.length()/7);i++)
+		{
+			
+			if(result.charAt((7*i)+2)=='A')
+			{
+				countA2++;
+			}
+			
+			else 
+			{
+				countB2++;
+			}
+						
+			
+		}
+		
+		for(int i=0;i<(result.length()/7);i++)
+		{
+			
+			if(result.charAt((7*i)+3)=='A')
+			{
+				countA3++;
+			}
+			
+			else 
+			{
+				countB3++;
+			}
+						
+			
+		}
+		
+		for(int i=0;i<(result.length()/7);i++)
+		{
+			
+			if(result.charAt((7*i)+4)=='A')
+			{
+				countA3++;
+			}
+			
+			else 
+			{
+				countB3++;
+			}
+						
+			
+		}
+		
+		for(int i=0;i<(result.length()/7);i++)
+		{
+			
+			if(result.charAt((7*i)+5)=='A')
+			{
+				countA4++;
+			}
+			
+			else 
+			{
+				countB4++;
+			}
+						
+			
+		}
+		
+		for(int i=0;i<(result.length()/7);i++)
+		{
+			
+			if(result.charAt((7*i)+6)=='A')
+			{
+				countA4++;
+			}
+			
+			else 
+			{
+				countB4++;
+			}
+						
+			
+		}
+		
+		 optA[0]= countA1;
+		 optA[1]= countA2;
+		 optA[2]= countA3;
+		 optA[3]= countA4;
+		 optB[0]= countB1;
+		 optB[1]= countB2;
+		 optB[2]= countB3;
+		 optB[3]= countB4;
+		
+		
+		
+		
+	}
+}
